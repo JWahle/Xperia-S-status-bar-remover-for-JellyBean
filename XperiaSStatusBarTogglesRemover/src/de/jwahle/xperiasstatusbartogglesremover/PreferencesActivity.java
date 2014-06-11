@@ -16,8 +16,6 @@ public class PreferencesActivity extends PreferenceActivity {
 
     private Restarter restarter;
     private SharedPreferences preferences;
-
-    
     
     @Override
     @SuppressWarnings("deprecation")
@@ -31,6 +29,8 @@ public class PreferencesActivity extends PreferenceActivity {
                 new RemoveTogglesPreferenceListener());
     }
 
+    @SuppressWarnings("deprecation")
+    @SuppressLint("WorldReadableFiles")
     private void setUpPreferences() {
         PreferenceManager manager = getPreferenceManager();
         manager.setSharedPreferencesName(PREFS);

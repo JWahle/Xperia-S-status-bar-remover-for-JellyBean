@@ -47,7 +47,7 @@ class Restarter {
     }
     
     private void handleException() {
-        Toast.makeText(context, R.string.need_restart, Toast.LENGTH_LONG)
+        Toast.makeText(context, R.string.need_restart, Toast.LENGTH_SHORT)
         .show();
     }
 

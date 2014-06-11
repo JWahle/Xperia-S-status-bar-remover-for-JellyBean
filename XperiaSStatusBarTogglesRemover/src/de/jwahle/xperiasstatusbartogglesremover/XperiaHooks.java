@@ -14,7 +14,6 @@ import de.robv.android.xposed.IXposedHookInitPackageResources;
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XC_MethodReplacement;
 import de.robv.android.xposed.XSharedPreferences;
-import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_InitPackageResources.InitPackageResourcesParam;
 import de.robv.android.xposed.callbacks.XC_LayoutInflated;
@@ -34,9 +33,7 @@ IXposedHookLoadPackage, IXposedHookInitPackageResources {
     
     private boolean shallHideStatusBarToggles() {
         preferences.reload();
-        boolean hide = preferences.getBoolean(HIDE_STATUS_BAR_TOGGLES, true); 
-        XposedBridge.log("hide = " + hide);
-        return hide;
+        return preferences.getBoolean(HIDE_STATUS_BAR_TOGGLES, true); 
     }
 
     private void suppressToolsMainStart(LoadPackageParam lpparam) {
@@ -84,9 +81,7 @@ IXposedHookLoadPackage, IXposedHookInitPackageResources {
     
     private boolean shallExpandLauncherGrid() {
         preferences.reload();
-        boolean expand = preferences.getBoolean(EXPAND_LAUNCHER_GRID, false); 
-        XposedBridge.log("expand = " + expand);
-        return expand;
+        return preferences.getBoolean(EXPAND_LAUNCHER_GRID, false); 
     }
     
     private void expandLauncherGrid(XResources res) {
