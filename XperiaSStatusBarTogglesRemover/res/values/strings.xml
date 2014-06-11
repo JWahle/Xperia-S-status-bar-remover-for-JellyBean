@@ -1,5 +1,8 @@
 <resources>
 
-	<string name="app_name">Xperia S Status Bar Toggles Remover</string>
+	<string name="app_name">Xperia S Tweaks</string>
+	<string name="remove_toggles">Remove status bar toggles</string>
+	<string name="expand_launcher_grid">Expand launcher grid to 4x5</string>
+	<string name="need_restart">Reboot to apply changes</string>
 
 </resources>
