@@ -13,7 +13,7 @@
 
 	<application
 		android:allowBackup="true"
-		android:icon="@drawable/ic_launcher"
+		android:icon="@drawable/launcher_icon"
 		android:label="@string/app_name"
 		android:theme="@style/AppTheme" >
 		<meta-data
@@ -24,7 +24,7 @@
 			android:value="2.0*" />
 		<meta-data
 			android:name="xposeddescription"
-			android:value="Xperia S Tweaks for Jellybean" />
+			android:resource="@string/xposed_descrition" />
 
 		<activity
 			android:name=".PreferencesActivity"
